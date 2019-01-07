@@ -23,6 +23,12 @@ Install git by choco
 
 Restart Powershell(Admin) to add the git bin path to PATH env
 
+Config git global configuration
+```
+> git config --global user.email "username@domain.com"
+> git config --global user.name "User Name"
+```
+
 Install packages (application) by choco
 
 ```
