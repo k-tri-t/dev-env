@@ -1,10 +1,7 @@
 Development environment for Windows
 ----
 
-Launch Powershell(Admin)
-```
-Win+x > a
-```
+Launch Powershell(Admin) `Win+x > a`
 
 # Install packages by chocolatey
 
@@ -53,10 +50,7 @@ see also:
 
 # Configuration after install
 
-Launch Powershell(*Not* Admin)
-```
-Win+x > i
-```
+Launch Powershell(*Not* Admin) `Win+x > i`
 
 Config git global configuration
 ```
@@ -67,10 +61,7 @@ Config git global configuration
 
 # Export choco config (package list)
 
-Launch Powershell(Admin)
-```
-Win+x > a
-```
+Launch Powershell(Admin) `Win+x > a`
 
 ```
 > Set-ExecutionPolicy RemoteSigned
