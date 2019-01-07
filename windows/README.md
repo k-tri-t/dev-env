@@ -23,12 +23,6 @@ Install git by choco
 
 Restart Powershell(Admin) to add the git bin path to PATH env
 
-Config git global configuration
-```
-> git config --global user.email "username@domain.com"
-> git config --global user.name "User Name"
-```
-
 Install packages (application) by choco
 
 ```
@@ -56,6 +50,20 @@ Search "sync-settings" package and Install it
 
 see also:
   - https://qiita.com/T_M/items/0fb0804eb1fd256aac4e
+
+# Configuration after install
+
+Launch Powershell(*Not* Admin)
+```
+Win+x > i
+```
+
+Config git global configuration
+```
+> git config --global user.email "username@domain.com"
+> git config --global user.name "User Name"
+```
+
 
 # Export choco config (package list)
 
