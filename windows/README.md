@@ -6,27 +6,63 @@ Launch Powershell(Admin)
 Win+x > a
 ```
 
-# Install
+# Install packages by chocolatey
 
 Install chocolatey
 
 ```
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-choco /?
+> Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+> choco /?
 ```
+
+Install git by choco
+
+```
+> choco install git -y
+```
+
+Restart Powershell(Admin) to add the git bin path to PATH env
 
 Install packages (application) by choco
 
 ```
-choco install choco-package.config -y
+> cd C:\Users\username
+> git clone https://github.com/k3trisnake/dev-env.git
+> cd dev-env\windows
+> choco install choco-package.config -y
 ```
+
+# Atom editor settings
+
+Launch atom editor
+
+Search "sync-settings" package and Install it
+
+## Generate Github gist and access token
+
+- Open https://github.com/settings/tokens/new
+- Enter description and select gist checkbox
+- Click Generate token
+- Copy token to Personal Access Token in Atom sync-settings settings
+- If you have already sync-settings gist, Copy gist ID to Gist ID in Atom sync-settings settings
+- Else Create secret Gist on github
+- Restore sync-settings
+
+see also:
+  - https://qiita.com/T_M/items/0fb0804eb1fd256aac4e
 
 # Export choco config (package list)
 
+Launch Powershell(Admin)
 ```
-powershell Set-ExecutionPolicy RemoteSigned
-powershell .\out_pkgs.ps1
-powershell Set-ExecutionPolicy Restricted
+Win+x > a
+```
+
+```
+> Set-ExecutionPolicy RemoteSigned
+> cd C:\Users\username\dev-env\windows
+> .\choco-export-pkgs.ps1
+> Set-ExecutionPolicy Restricted
 ```
 
 # Reference
