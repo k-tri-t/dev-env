@@ -18,8 +18,3 @@ $ brew --version
 Homebrew 1.9.3
 Homebrew/homebrew-core (git revision 7378; last commit 2019-01-28)
 ```
-
-Install Homebrew Cask
-```
-$ brew install caskroom/cask/brew-cask
-```
