@@ -29,6 +29,14 @@ Install packages (application) by choco
 > choco install choco-package.config -y
 ```
 
+# Install custom package (e.g. link broken)
+
+```
+> cd dev-env\windows\my-global
+> choco pack
+> choco install my-global -s .
+```
+
 # Atom editor settings
 
 Launch atom editor
