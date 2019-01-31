@@ -23,7 +23,7 @@ Restart Powershell(Admin) to add the git bin path to PATH env
 Install packages (application) by choco
 
 ```
-> cd C:\Users\username
+> cd $HOME
 > git clone https://github.com/k3trisnake/dev-env.git
 > cd dev-env\windows
 > choco install choco-package.config -y
@@ -36,6 +36,24 @@ Install packages (application) by choco
 > choco pack
 > choco install my-global -s .
 ```
+
+# SSH Key and agent
+
+Genrate SSH Key on git-bash
+
+```
+$ ssh-keygen -t ed25519 -C "email@example.com"
+```
+
+Add SSH public key `.ssh/id_ed25519.pub` to Gitlab and Github.
+
+Convert SSH secret to PPK format.
+
+- WIP
+
+To load SSH key on startup, copy pagent shortcut to the Startup directory.
+- src: dev-env\windows\PAGEANT.lnk
+- dest: $HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\PAGEANT.lnk
 
 # Atom editor settings
 
