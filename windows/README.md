@@ -47,24 +47,31 @@ To load SSH key on startup, copy pagent shortcut to the Startup directory.
 - src: dev-env\windows\PAGEANT.lnk
 - dest: $HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\PAGEANT.lnk
 
-# Atom editor settings
+# VSCode settings
 
-Launch atom editor
+- Launch Command pallet `Ctrl+Shift+p`
+- Search `Install Extentions`
+- Type `Setting Sync`
+- Click Install
 
-Search "sync-settings" package and Install it
-
-## Generate Github gist and access token
+## Generate Github access token
 
 - Open https://github.com/settings/tokens/new
-- Enter description and select gist checkbox
+- Enter description
+- Select gist checkbox
 - Click Generate token
-- Copy token to Personal Access Token in Atom sync-settings settings
-- If you have already sync-settings gist, Copy gist ID to Gist ID in Atom sync-settings settings
-- Else Create secret Gist on github
-- Restore sync-settings
+- Copy token to clipboard
 
 see also:
-  - https://qiita.com/T_M/items/0fb0804eb1fd256aac4e
+  - https://github.com/shanalikhan/code-settings-sync
+
+## Upload Settings For the first time
+
+Type ">Sync" In Command Palette into order download / upload
+
+## Download Settings
+
+Type ">Sync" In Command Palette into order download / upload
 
 # Configuration after install
 
