@@ -29,14 +29,6 @@ Install packages (application) by choco
 > choco install choco-package.config -y
 ```
 
-# Install custom package (e.g. link broken)
-
-```
-> cd dev-env\windows\my-global
-> choco pack
-> choco install my-global -s .
-```
-
 # SSH Key and agent
 
 Genrate SSH Key on git-bash
@@ -94,6 +86,14 @@ Launch Powershell(Admin) `Win+x > a`
 > cd C:\Users\username\dev-env\windows
 > .\choco-export-pkgs.ps1
 > Set-ExecutionPolicy Restricted
+```
+
+# Install custom package (e.g. link broken) (Optional)
+
+```
+> cd dev-env\windows\my-global
+> choco pack
+> choco install my-global -s .
 ```
 
 # Reference
