@@ -68,10 +68,12 @@ see also:
 ## Upload Settings For the first time
 
 Type ">Sync" In Command Palette into order download / upload
+  - Gist ID: 941a9b3637dedb38b04a76c6e86eba72
 
 ## Download Settings
 
 Type ">Sync" In Command Palette into order download / upload
+  - Gist ID: 941a9b3637dedb38b04a76c6e86eba72
 
 # Configuration after install
 
@@ -101,6 +103,12 @@ Launch Powershell(Admin) `Win+x > a`
 > cd dev-env\windows\my-global
 > choco pack
 > choco install my-global -s .
+```
+
+# WIP: Cquery
+
+```
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=release -DCMAKE_EXPORT_COMPILE_COMMANDS=YES DCMAKE_GENERATOR_PLATFORM=x64 ..
 ```
 
 # Reference
