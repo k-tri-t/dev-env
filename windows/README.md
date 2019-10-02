@@ -34,20 +34,42 @@ Install packages (application) by choco
 Genrate SSH Key on git-bash
 
 ```
-$ ssh-keygen -t ed25519 -C "email@example.com"
+$ ssh-keygen -t ed25519 -C "name@example.com"
 ```
 
 Add SSH public key `.ssh/id_ed25519.pub` to Gitlab and Github.
 
 Convert SSH secret to PPK format.
 
-- WIP
+  WIP
 
 To load SSH key on startup, copy pagent shortcut to the Startup directory.
 - src: dev-env\windows\PAGEANT.lnk
 - dest: $HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\PAGEANT.lnk
 
-# VSCode settings
+# Configuration after install
+
+Launch Powershell(*Not* Admin) `Win+x > i`
+
+Config git global configuration
+```
+> git config --global user.email "username@domain.com"
+> git config --global user.name "User Name"
+```
+
+
+# Export choco config (package list)
+
+Launch Powershell(Admin) `Win+x > a`
+
+```
+> Set-ExecutionPolicy RemoteSigned
+> cd C:\Users\username\dev-env\windows
+> .\choco-export-pkgs.ps1
+> Set-ExecutionPolicy Restricted
+```
+
+# (OLD) VSCode settings
 
 - Launch Command pallet `Ctrl+Shift+p`
 - Search `Install Extentions`
@@ -74,42 +96,6 @@ Type ">Sync" In Command Palette into order download / upload
 
 Type ">Sync" In Command Palette into order download / upload
   - Gist ID: 941a9b3637dedb38b04a76c6e86eba72
-
-# Configuration after install
-
-Launch Powershell(*Not* Admin) `Win+x > i`
-
-Config git global configuration
-```
-> git config --global user.email "username@domain.com"
-> git config --global user.name "User Name"
-```
-
-
-# Export choco config (package list)
-
-Launch Powershell(Admin) `Win+x > a`
-
-```
-> Set-ExecutionPolicy RemoteSigned
-> cd C:\Users\username\dev-env\windows
-> .\choco-export-pkgs.ps1
-> Set-ExecutionPolicy Restricted
-```
-
-# Install custom package (e.g. link broken) (Optional)
-
-```
-> cd dev-env\windows\my-global
-> choco pack
-> choco install my-global -s .
-```
-
-# WIP: Cquery
-
-```
-cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=release -DCMAKE_EXPORT_COMPILE_COMMANDS=YES DCMAKE_GENERATOR_PLATFORM=x64 ..
-```
 
 # Reference
 - https://qiita.com/jiro4989/items/fffc433d2eddcfa8edd5
